@@ -42,8 +42,9 @@ GameObject:
   - component: {fileID: 3837762968103363283}
   - component: {fileID: 3837762968103363280}
   - component: {fileID: 3837762968103363281}
+  - component: {fileID: 7667483146265089356}
   m_Layer: 10
-  m_Name: Enemy
+  m_Name: Enemy - Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,36 +104,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb0ceec5cf102d469570f183c77083b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theRB: {fileID: 3837762968103363281}
-  moveSpeed: 3
-  shouldChasePlayer: 1
-  rangeToChasePlayer: 7
-  shouldRunAway: 0
-  runawayRange: 0
-  shouldWander: 0
-  wanderLength: 0
-  pauseLength: 0
-  shouldPatrol: 0
-  patrolPoints: []
-  shouldShoot: 1
-  bullet: {fileID: 5819456331581889278, guid: c73098aed36748949aca357bc42013a6, type: 3}
+  rigidBody: {fileID: 3837762968103363281}
+  movingSpeed: 1.5
+  bodySpriteRenderer: {fileID: 3837762968396883525}
+  willFollowCharacter: 1
+  proximityToFollowCharacter: 5
+  willMoveAwayFromCharacter: 0
+  proximityToMoveAway: 0
+  willShootProjectile: 0
+  proximityToShoot: 0
+  projectile: {fileID: 0}
   firePoint: {fileID: 2792074072588716801}
-  fireRate: 1
-  shootRange: 10
-  theBody: {fileID: 3837762968396883525}
-  anim: {fileID: 0}
+  rateOfFire: 0
   health: 150
-  deathSplatters:
-  - {fileID: 1341179040086717127, guid: 351398112a8871f48ab4031eaa7b5543, type: 3}
-  - {fileID: 6475100964590732, guid: 0837ede405ff6654788d0ae5d3a6201b, type: 3}
-  - {fileID: 2487743315992515908, guid: 735a823b026aadf4eb70dce3cb0b5fe5, type: 3}
-  - {fileID: 3444892873143216210, guid: 39f2de50d5d664f44ac33432e3388870, type: 3}
-  hitEffect: {fileID: 6314180217267293822, guid: 1cc409ca0e258db44978f7088646891b,
-    type: 3}
-  shouldDropItem: 1
-  itemsToDrop:
-  - {fileID: 4648958299950149208, guid: 1c8999544ae228e49a4aeb9fe3a4d37c, type: 3}
-  itemDropPercent: 25
+  willGiveItem: 1
+  collectibles:
+  - {fileID: 4648958299950149208, guid: ede61e1183ac840bbbafbbc4fd324498, type: 3}
+  - {fileID: 767255673612065574, guid: ab5a8c663b92146a0a3c7f8b0d8908e6, type: 3}
+  - {fileID: 334413965934146477, guid: 43c1ece992e1741c798a21a8a3ef18e1, type: 3}
+  collectibleDropPct: 25
 --- !u!50 &3837762968103363281
 Rigidbody2D:
   serializedVersion: 4
@@ -154,6 +144,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7667483146265089356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837762968103363284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fadc20864045f4d974265fdea4d844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3837762968396883527
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +227,7 @@ SpriteRenderer:
   m_SortingLayerID: -1091551231
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8421458170528590454, guid: 02027016afbc5d544ab92ba819bc8094,
+  m_Sprite: {fileID: -7844560889915226194, guid: 02027016afbc5d544ab92ba819bc8094,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

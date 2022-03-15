@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5819456331581889265}
   - component: {fileID: 5819456331581889266}
   m_Layer: 11
-  m_Name: Enemy Bullet
+  m_Name: Enemy Projectile - Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -107,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5819456331581889278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71073ebc46bc8614b86f9a56ce3e8772, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a5d41af1688c4edf85cd526a3cb8198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  projectileSpeed: 3
