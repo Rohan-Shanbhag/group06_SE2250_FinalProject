@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7240080027942191755}
   - component: {fileID: 2766300317315917030}
-  - component: {fileID: 2253790433793833410}
   m_Layer: 8
-  m_Name: Machine Gun
+  m_Name: Machine Gun 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.92, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8833703477076363106}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,8 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 59874395
   m_SortingLayer: 6
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7144583015058605669, guid: 48d85d1ef51430e42b6aef57f02c863d,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa1b6e48e89169e4785ea05e41eb4811, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,54 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2253790433793833410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2823181517626305386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf6dedc693554cb1b5ab40cc1292b34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletToFire: {fileID: 9070735391092049552, guid: 2144e9fd76f9d45899dcbe2777b48f1b,
-    type: 3}
-  firePoint: {fileID: 8833703477076363106}
-  timeBetweenShots: 0.25
-  gunName: Assault Rifle
-  gunHUDIcon: {fileID: 0}
-  gunCost: 7
-  shopIcon: {fileID: 6820856509940793013, guid: 48d85d1ef51430e42b6aef57f02c863d,
-    type: 3}
---- !u!1 &3192291865104858577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8833703477076363106}
-  m_Layer: 8
-  m_Name: Fire Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8833703477076363106
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3192291865104858577}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 0.371, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7240080027942191755}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

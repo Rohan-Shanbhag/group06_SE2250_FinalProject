@@ -47,6 +47,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -92,18 +94,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 7215396523932315458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd917225d0d173146b6b0f08ecef5a13, type: 3}
+  m_Script: {fileID: 11500000, guid: dcf6dedc693554cb1b5ab40cc1292b34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletToFire: {fileID: 4189913780510908286, guid: aea44e738a6d53d428ed536f7372350f,
+  bulletToFire: {fileID: 4189913780510908286, guid: e83e865f7b79a4e87b44110c74135209,
     type: 3}
   firePoint: {fileID: 4150162488350442314}
   timeBetweenShots: 0.75
-  weaponName: Pistol
-  gunUI: {fileID: 262978286505467586, guid: f72804754a2106a4884d758772ef2a02, type: 3}
-  itemCost: 25
-  gunShopSprite: {fileID: 6407226241554960098, guid: 48d85d1ef51430e42b6aef57f02c863d,
-    type: 3}
+  gunName: Pistol
+  gunHUDIcon: {fileID: 0}
+  gunCost: 7
+  shopIcon: {fileID: 0}
 --- !u!1 &8017116249709558265
 GameObject:
   m_ObjectHideFlags: 0
