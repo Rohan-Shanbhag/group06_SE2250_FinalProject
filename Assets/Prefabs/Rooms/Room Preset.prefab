@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6746017351460184826}
   - component: {fileID: 7176552193693973626}
   m_Layer: 15
-  m_Name: Room Layout
+  m_Name: Room Preset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
