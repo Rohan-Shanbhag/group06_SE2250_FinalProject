@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6416800354666792287}
   - component: {fileID: 6416800354666792284}
   - component: {fileID: 6416800354666792282}
+  - component: {fileID: 5562052591131828009}
+  - component: {fileID: -8997557503214389545}
   m_Layer: 12
   m_Name: Wooden Crate
   m_TagString: Untagged
@@ -110,3 +112,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8125, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5562052591131828009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416800354666792283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf8b909370444ebe8eb29ce253f9de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crateBrokenParts:
+  - {fileID: 7620099463965469452, guid: a1ab702606fc94676ba364bfdb6529c0, type: 3}
+  - {fileID: 8386453708976475025, guid: 5b245e13900124070a08f88642a03d2c, type: 3}
+  - {fileID: 6211534205756118596, guid: e7c3ecf609acf499c8630121dc6c6c0e, type: 3}
+  - {fileID: 8052924132787476286, guid: 3e5cb544fd8854658afd452f14b79841, type: 3}
+  - {fileID: 8154609754102747008, guid: a544bcfd6ea1d42898599876c724387a, type: 3}
+  - {fileID: 5161357955899232537, guid: 9f7efde23e6c44a808ee01d9139ab497, type: 3}
+  willDropCollectible: 1
+  collectibles:
+  - {fileID: 4648958299950149208, guid: ede61e1183ac840bbbafbbc4fd324498, type: 3}
+  - {fileID: 767255673612065574, guid: ab5a8c663b92146a0a3c7f8b0d8908e6, type: 3}
+  - {fileID: 334413965934146477, guid: 43c1ece992e1741c798a21a8a3ef18e1, type: 3}
+  collectibleDropPct: 25
+--- !u!114 &-8997557503214389545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416800354666792283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c366bb0889dd2494da6f166523cd086c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
