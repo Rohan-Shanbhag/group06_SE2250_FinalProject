@@ -51,4 +51,24 @@ public class CharacterOneHealthController : MonoBehaviour
             }
         }
     }
+
+    public void MomentaryInvincibility(float length)
+    {
+        invincibilityMetric = length;
+    }
+
+    public void HealPlayer(int healAmount)
+    {
+        currHealth += healAmount;
+        if(currHealth > maxHealth)
+        {
+            currHealth = maxHealth;
+        }
+    }
+
+    public void IncreaseMaxHealth(int amount)
+    {
+        maxHealth += amount;
+        currHealth = maxHealth;
+    }
 }
