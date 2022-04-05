@@ -27,6 +27,8 @@ public class CharacterOneController : MonoBehaviour
     [HideInInspector]
     public int equippedWeapon;
 
+    public Animator animator;
+
     private void Awake()
     {
         instance = this;
@@ -96,6 +98,7 @@ public class CharacterOneController : MonoBehaviour
                 {
                     activeMovingSpeed = dashingSpeed;
                     dashingTimer = dashingLength;
+                    animator.SetTrigger("dash");
                     CharacterOneHealthController.instance.MomentaryInvincibility(dashingGodMode);
                 }
             }
@@ -114,9 +117,20 @@ public class CharacterOneController : MonoBehaviour
             {
                 dashingInaccessibleTimer -= Time.deltaTime;
             }
+
+            if (movingInput != Vector2.zero)
+            {
+                animator.SetBool("isMoving", true);
+            }
+            else
+            {
+                animator.SetBool("isMoving", false);
+            }
+
         } else
         {
             rigidBody.velocity = Vector2.zero;
+            animator.SetBool("isMoving", false);
         }
     }
 

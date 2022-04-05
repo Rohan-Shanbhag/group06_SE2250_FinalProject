@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     public Transform trgt;
     public Camera mainCamera;
     public float movingSpeed;
+    public bool isBossRoom;
 
     private void Awake()
     {
@@ -17,7 +18,10 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if(isBossRoom)
+        {
+            trgt = CharacterOneController.instance.transform;
+        }
     }
 
     // Update is called once per frame

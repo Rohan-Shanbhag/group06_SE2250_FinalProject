@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class CharacterSelection : MonoBehaviour
 {
-    private bool canSelect;
-    public GameObject message;
-    public CharacterOneController playerToSpawn;
-    public bool shouldUnlock;
+    private bool isAbleToSelect;
+    public GameObject msg;
+    public CharacterOneController switchableCharacter;
+    public bool canFree;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (shouldUnlock)
+        if (canFree)
         {
-            if (PlayerPrefs.HasKey(playerToSpawn.name))
+            if (PlayerPrefs.HasKey(switchableCharacter.name))
             {
-                if (PlayerPrefs.GetInt(playerToSpawn.name) == 1)
+                if (PlayerPrefs.GetInt(switchableCharacter.name) == 1)
                 {
                     gameObject.SetActive(true);
                 }
@@ -35,15 +35,15 @@ public class CharacterSelection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canSelect)
+        if(isAbleToSelect)
         {
             if(Input.GetKeyDown(KeyCode.E))
             {
-                Vector3 playerPos = CharacterOneController.instance.transform.position;
+                Vector3 switchableCharacterPosition = CharacterOneController.instance.transform.position;
 
                 Destroy(CharacterOneController.instance.gameObject);
 
-                CharacterOneController newPlayer = Instantiate(playerToSpawn, playerPos, playerToSpawn.transform.rotation);
+                CharacterOneController newPlayer = Instantiate(switchableCharacter, switchableCharacterPosition, switchableCharacter.transform.rotation);
                 CharacterOneController.instance = newPlayer;
 
                 gameObject.SetActive(false);
@@ -61,8 +61,8 @@ public class CharacterSelection : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            canSelect = true;
-            message.SetActive(true);
+            isAbleToSelect = true;
+            msg.SetActive(true);
         }
     }
 
@@ -70,8 +70,8 @@ public class CharacterSelection : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            canSelect = false;
-            message.SetActive(false);
+            isAbleToSelect = false;
+            msg.SetActive(false);
         }
     }
 }

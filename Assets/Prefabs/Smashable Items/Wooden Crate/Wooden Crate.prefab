@@ -136,7 +136,7 @@ MonoBehaviour:
   - {fileID: 4648958299950149208, guid: ede61e1183ac840bbbafbbc4fd324498, type: 3}
   - {fileID: 767255673612065574, guid: ab5a8c663b92146a0a3c7f8b0d8908e6, type: 3}
   - {fileID: 334413965934146477, guid: 43c1ece992e1741c798a21a8a3ef18e1, type: 3}
-  collectibleDropPct: 25
+  collectibleDropPct: 100
 --- !u!114 &-8997557503214389545
 MonoBehaviour:
   m_ObjectHideFlags: 0

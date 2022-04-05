@@ -15,6 +15,8 @@ public class LevelAttributeManagement : MonoBehaviour
 
     public Transform startingPoint;
 
+    public string nextLevel;
+
     private void Awake()
     {
         instance = this;
@@ -38,7 +40,7 @@ public class LevelAttributeManagement : MonoBehaviour
             PauseUnpause();
         }
     }
-    
+
     public void PauseUnpause()
     {
         if(!isGameCurrentlyPaused)
@@ -68,4 +70,18 @@ public class LevelAttributeManagement : MonoBehaviour
             amtOfCoinsHeld = 0;
         }
     }
+
+    public IEnumerator LevelEnd()
+    {
+        CharacterOneController.instance.isAbleToMove = false;
+
+        yield return new WaitForSeconds(loadDelay);
+
+        // CharacterInstanceUpdater.instance.amtOfCoinsHeld = amtOfCoinsHeld;
+        // CharacterInstanceUpdater.instance.currentHealth = CharacterOneHealthController.instance.currHealth;
+        // CharacterInstanceUpdater.instance.maxHealth = CharacterOneHealthController.instance.maxHealth;
+
+        SceneManager.LoadScene(nextLevel);
+    }
+
 }

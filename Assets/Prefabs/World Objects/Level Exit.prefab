@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 3848049036463856593}
   - component: {fileID: 3229209616985414243}
   - component: {fileID: 1187581737582565953}
+  - component: {fileID: 4302511884048790905}
   m_Layer: 0
   m_Name: Level Exit
   m_TagString: Untagged
@@ -194,3 +195,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &4302511884048790905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993685499809706779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c707811246adb4d208eb3f02f6a5f133, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

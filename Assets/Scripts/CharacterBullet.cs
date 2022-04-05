@@ -24,7 +24,10 @@ public class CharacterBullet : MonoBehaviour
             other.GetComponent<EnemyController>().DamageEnemy(damageToGive);
         }
 
-        // add boss damage dealt
+        if(other.tag == "Boss")
+        {
+            BossController.instance.TakeDamage(damageToGive);
+        }
     }
 
     private void OnBecameInvisible()
